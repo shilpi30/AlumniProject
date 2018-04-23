@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LoginPage]">
+  <test thread-count="5" name="SocialLogin(failed)">
+    <classes>
+      <class name="page.classes.TestNG">
+        <methods>
+          <include name="clickFacebook"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- page.classes.TestNG -->
+    </classes>
+  </test> <!-- SocialLogin(failed) -->
+</suite> <!-- Failed suite [LoginPage] -->

@@ -1,0 +1,53 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+import page.classes.LoginPage;
+import org.testng.annotations.BeforeMethod;
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+
+public class TestNG {
+	
+	private WebDriver driver;
+	private String baseURL = "http://ntualumniportal.excelindia.com/NTULogin";
+
+ 
+	
+  @BeforeClass
+  public void beforeMethod() {
+
+	 System.setProperty("webdriver.chrome.driver","C:\\Users\\shilpi.agarwal\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+	   driver.get(baseURL);
+	  
+	  
+  }
+  
+  @Test(priority = 1)
+  public void Linkedin() throws InterruptedException {
+	  
+	  LoginPage.linkedinLogin(driver).click();
+	  Thread.sleep(5000);	  
+	 }
+  
+  @Test(priority =2)
+  public void Facebook(){
+	  
+	  LoginPage.facebookLogin(driver).click();
+  }
+
+  @AfterClass
+  public void afterMethod() {
+	  driver.quit();
+  }
+
+}

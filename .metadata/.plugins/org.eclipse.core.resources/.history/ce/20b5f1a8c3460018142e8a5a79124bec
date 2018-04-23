@@ -1,0 +1,30 @@
+package page.classes;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LoginPage {
+	
+	
+	public static WebElement element= null;
+	
+	public  WebElement linkedinLogin(WebDriver driver){
+		element= driver.findElement(By.id("dnn_ctr532_ntuLogin_Login_Linkedin_loginButton"));
+		return element;
+		
+		
+	}
+	
+	public static WebElement facebookLogin(WebDriver driver){
+	
+		element= driver.findElement(By.id("dnn_ctr532_ntuLogin_Login_Facebook_loginButton"));
+		return element;
+		
+	
+	}
+	
+	@FindBy(name= "session_key")
+    WebElement Emailplaceholder;
+}

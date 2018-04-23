@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name= "LoginPage">
+   <test name="SocialLogin">
+     <classes>
+         <class name= "page.classes.TestNG">
+            <methods>
+               <include name = "clickLinkedin"/>
+              <!-- <include name= "clickFacebook"/>  -->
+            </methods>
+         </class>
+     </classes>
+   </test>
+</suite>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5301" started-at="2018-04-23T09:30:16Z" finished-at="2018-04-23T09:30:22Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5301" started-at="2018-04-23T09:30:16Z" finished-at="2018-04-23T09:30:22Z">
+      <class name="page.classes.TestNG">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@7113b13f]" name="beforeClass" is-config="true" duration-ms="43314" started-at="2018-04-23T09:29:33Z" finished-at="2018-04-23T09:30:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@7113b13f]" name="clickSocial" duration-ms="4993" started-at="2018-04-23T09:30:17Z" finished-at="2018-04-23T09:30:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSocial -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@7113b13f]" name="afterClass" is-config="true" duration-ms="4627" started-at="2018-04-23T09:30:23Z" finished-at="2018-04-23T09:30:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- page.classes.TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
