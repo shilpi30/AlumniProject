@@ -5,8 +5,9 @@
     <classes>
       <class name="page.classes.TestNG">
         <methods>
-          <include name="clickFacebook"/>
-          <include name="clickLinkedin"/>
+          <include name="afterClass"/>
+          <include name="clickSocial"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- page.classes.TestNG -->
     </classes>

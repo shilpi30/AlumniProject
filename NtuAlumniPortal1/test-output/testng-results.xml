@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5301" started-at="2018-04-23T09:30:16Z" finished-at="2018-04-23T09:30:22Z">
+  <suite name="LoginPage" duration-ms="13462" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5301" started-at="2018-04-23T09:30:16Z" finished-at="2018-04-23T09:30:22Z">
+    <test name="SocialLogin" duration-ms="13462" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
       <class name="page.classes.TestNG">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@7113b13f]" name="beforeClass" is-config="true" duration-ms="43314" started-at="2018-04-23T09:29:33Z" finished-at="2018-04-23T09:30:16Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="beforeClass" is-config="true" duration-ms="8226" started-at="2018-04-23T18:27:21Z" finished-at="2018-04-23T18:27:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@7113b13f]" name="clickSocial" duration-ms="4993" started-at="2018-04-23T09:30:17Z" finished-at="2018-04-23T09:30:22Z">
+        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="clickSocial" duration-ms="13423" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickSocial -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@7113b13f]" name="afterClass" is-config="true" duration-ms="4627" started-at="2018-04-23T09:30:23Z" finished-at="2018-04-23T09:30:27Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-04-23T18:27:42Z" finished-at="2018-04-23T18:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- page.classes.TestNG -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- SocialLogin -->
+  </suite> <!-- LoginPage -->
 </testng-results>
