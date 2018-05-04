@@ -29,7 +29,7 @@ public class LoginPage{
 	}
 
 	
-	@FindBy(name= "session_key")
+	@FindBy(id= "session_key-oauth2SAuthorizeForm")
     WebElement linkedinemailTextbox ;
 	
 	@FindBy(id="session_password-oauth2SAuthorizeForm")
@@ -57,7 +57,7 @@ public class LoginPage{
 		PageFactory.initElements(driver, this);
 		
 	}
-	
+
 	public void linkedinEnterEmail(String email) {
 		
 		linkedinemailTextbox.sendKeys(email);

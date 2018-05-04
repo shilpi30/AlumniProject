@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginPage" duration-ms="13462" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
+  <suite name="LoginPage" duration-ms="19094" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
     <groups>
     </groups>
-    <test name="SocialLogin" duration-ms="13462" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
+    <test name="SocialLogin" duration-ms="19094" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
       <class name="page.classes.TestNG">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="beforeClass" is-config="true" duration-ms="8226" started-at="2018-04-23T18:27:21Z" finished-at="2018-04-23T18:27:29Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@371a67ec]" name="beforeClass" is-config="true" duration-ms="7533" started-at="2018-05-03T10:13:20Z" finished-at="2018-05-03T10:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="clickSocial" duration-ms="13423" started-at="2018-04-23T18:27:29Z" finished-at="2018-04-23T18:27:42Z">
+        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@371a67ec]" name="clickSocial" duration-ms="19066" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickSocial -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@612fc6eb]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-04-23T18:27:42Z" finished-at="2018-04-23T18:27:42Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@371a67ec]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-05-03T10:13:47Z" finished-at="2018-05-03T10:13:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

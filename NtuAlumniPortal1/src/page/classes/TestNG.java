@@ -2,17 +2,10 @@ package page.classes;
 
 import org.testng.annotations.Test;
 import page.classes.LoginPage;
-//import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
 import java.util.concurrent.TimeUnit;
-
-//import org.junit.AfterClass;
-//import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-// import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 
 public class TestNG {
@@ -27,10 +20,10 @@ public class TestNG {
   @BeforeSuite
   public void beforeClass() {
 
-	 System.setProperty("webdriver.gecko.driver","D:\\Eclipse\\geckodriver-v0.16.1-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\shilpi.agarwal\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	driver = new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
 	   driver.get(baseURL);
 	   
 	   loginPage = new LoginPage(driver);
@@ -39,11 +32,11 @@ public class TestNG {
   
   public void clickLinkedin() throws InterruptedException {
 	  
-	  LoginPage.linkedinLogin(driver).click();
+	  loginPage.linkedinLogin(driver).click();
 	  loginPage.linkedinEnterEmail("ntualumniuser1@gmail.com");
-	  loginPage.linkedinEnterPassword("Excel@123");
+      loginPage.linkedinEnterPassword("Excel@123");
 	  loginPage.linkedinClickAllowAccessButton();
-	  Thread.sleep(100000);
+	  Thread.sleep(10000);
 	 }
   
   public void clickFacebook() throws InterruptedException{

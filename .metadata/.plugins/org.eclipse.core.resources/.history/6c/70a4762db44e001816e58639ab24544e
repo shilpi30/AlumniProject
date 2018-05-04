@@ -1,0 +1,72 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+import page.classes.LoginPage;
+import org.testng.annotations.BeforeSuite;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+
+public class TestNG {
+	
+	private WebDriver driver;
+	private String baseURL = "http://ntualumniportal.excelindia.com/NTULogin";
+	private String social= "linkedin";
+	LoginPage loginPage;
+
+ 
+	
+  @BeforeSuite
+  public void beforeClass() {
+
+	 System.setProperty("webdriver.chrome.driver","E:\\Selenium Docs\\Driver\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	//	driver.manage().window().maximize();
+	   driver.get(baseURL);
+	   
+	   loginPage = new LoginPage(driver);
+	  
+  }
+  
+  public void clickLinkedin() throws InterruptedException {
+	  
+	  loginPage.linkedinLogin(driver).click();
+	  loginPage.linkedinEnterEmail("ntualumniuser1@gmail.com");
+      loginPage.linkedinEnterPassword("Excel@123");
+	  loginPage.linkedinClickAllowAccessButton();
+	  Thread.sleep(100000);
+	 }
+  
+  public void clickFacebook() throws InterruptedException{
+	  
+	  loginPage.facebookLogin(driver).click();
+	  loginPage.facebookEnterEmail("ntualumniuser1@gmail.com");
+	  loginPage.facebookEnterPassword("Excel@123");
+	  loginPage.facebookClickLoginButton();
+	  Thread.sleep(10000);
+  }
+  
+  @Test
+  public void clickSocial() throws InterruptedException {
+	  
+	  if(social.equals("linkedin")) {
+		  
+		  this.clickLinkedin();
+		  Thread.sleep(2000);
+	  }
+	  
+	  else {
+		  
+		  this.clickFacebook();
+	  }
+	    
+  }
+
+  @AfterSuite
+  public void afterClass() {
+	 // driver.quit();
+  }
+
+}
