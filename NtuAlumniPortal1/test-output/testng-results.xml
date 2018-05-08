@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginPage" duration-ms="19094" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
+  <suite name="DashboardPage" duration-ms="54502" started-at="2018-05-08T09:58:25Z" finished-at="2018-05-08T09:59:20Z">
     <groups>
     </groups>
-    <test name="SocialLogin" duration-ms="19094" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
+    <test name="LinksCLick" duration-ms="54502" started-at="2018-05-08T09:58:25Z" finished-at="2018-05-08T09:59:20Z">
+      <class name="page.classes.DashboardLinks">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:page.classes.DashboardLinks@1e7c7811]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-05-08T09:58:53Z" finished-at="2018-05-08T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@602e0143]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f()[pri:0, instance:page.classes.DashboardLinks@1e7c7811]" name="f" duration-ms="26970" started-at="2018-05-08T09:58:53Z" finished-at="2018-05-08T09:59:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:page.classes.DashboardLinks@1e7c7811]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-05-08T09:59:20Z" finished-at="2018-05-08T09:59:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- page.classes.DashboardLinks -->
       <class name="page.classes.TestNG">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:page.classes.TestNG@371a67ec]" name="beforeClass" is-config="true" duration-ms="7533" started-at="2018-05-03T10:13:20Z" finished-at="2018-05-03T10:13:28Z">
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:page.classes.TestNG@7a3d45bd]" name="beforeClass" is-config="true" duration-ms="10861" started-at="2018-05-08T09:58:14Z" finished-at="2018-05-08T09:58:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@602e0143]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@371a67ec]" name="clickSocial" duration-ms="19066" started-at="2018-05-03T10:13:28Z" finished-at="2018-05-03T10:13:47Z">
+        <test-method status="PASS" signature="clickSocial()[pri:0, instance:page.classes.TestNG@7a3d45bd]" name="clickSocial" duration-ms="27501" started-at="2018-05-08T09:58:25Z" finished-at="2018-05-08T09:58:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickSocial -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@371a67ec]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-05-03T10:13:47Z" finished-at="2018-05-03T10:13:47Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:page.classes.TestNG@7a3d45bd]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-05-08T09:59:20Z" finished-at="2018-05-08T09:59:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- page.classes.TestNG -->
-    </test> <!-- SocialLogin -->
-  </suite> <!-- LoginPage -->
+    </test> <!-- LinksCLick -->
+  </suite> <!-- DashboardPage -->
 </testng-results>

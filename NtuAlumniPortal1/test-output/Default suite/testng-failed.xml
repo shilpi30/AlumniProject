@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="page.classes.TestNG">
+      <class name="page.classes.DashboardLinks">
         <methods>
-          <include name="afterClass"/>
-          <include name="clickSocial"/>
-          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="f"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- page.classes.TestNG -->
+      </class> <!-- page.classes.DashboardLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

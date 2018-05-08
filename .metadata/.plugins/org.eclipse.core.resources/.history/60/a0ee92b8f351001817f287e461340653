@@ -1,0 +1,103 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+
+import org.testng.annotations.BeforeMethod;
+
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import javax.print.DocFlavor.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+
+import page.classes.TestNG;
+import page.classes.LoginPage;
+
+public class DashboardLinks {
+ 
+    static WebDriver driver;
+    TestNG testng;
+    LoginPage loginPage;
+    private String baseURL = "http://ntualumniportal.excelindia.com/NTULogin";
+    
+	@BeforeMethod
+    public void beforeMethod() throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\shilpi.agarwal\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	//	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	//	driver.manage().window().maximize();
+		driver.get(baseURL);
+		
+		 testng = new TestNG();
+		 loginPage = new LoginPage(driver);
+		 
+		
+		 
+	  }
+	
+  @Test
+  public void f() throws InterruptedException {
+	  testng.clickLinkedin(driver);
+	  loginPage.linkedinEnterEmail("ntualumniuser1@gmail.com");
+	  List<WebElement> linksList = clickableLinks();
+	  for (WebElement link : linksList) {
+		  
+		  String href = link.getAttribute("href");
+		  try {
+			  
+			  System.out.println("URL " + href + "returned " + linkStatus(new URL(href)));
+		  }
+		  catch (Exception e) {
+			  System.out.println(e.getMessage());
+		  }
+	  }
+	  
+  }
+  
+  public static List<WebElement> clickableLinks() {
+	  
+	  List<WebElement> linkstoClick = new ArrayList<WebElement>();
+	  List<WebElement> elements = driver.findElements(By.tagName("a"));
+	  elements.addAll(driver.findElement(By.tagName("img")));     
+       for (WebElement e : elements){
+    	   
+    	   if(e.getAttribute("href")!= null) {
+    		   
+    		   linkstoClick.add(e);
+    	   }
+       }
+	 
+	return linkstoClick;
+	
+  }
+  
+  public static String linkStatus(URL url) {
+	  
+	  try {
+		  
+		  HttpURLConnection http = (HttpURLConnection) url.openConnection();
+		  String responseMessage;
+		return responseMessage;
+	  }
+	  
+	  catch (Exception e) { 
+		  return e.getMessage();
+		  
+		  
+	  }
+	  
+  }
+
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}

@@ -1,0 +1,95 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+
+import org.testng.annotations.BeforeMethod;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
+
+import page.classes.TestNG;
+import page.classes.LoginPage;
+
+public class DashboardLinks {
+ 
+    static WebDriver driver;
+    TestNG testng;
+    LoginPage loginPage;
+    private String baseURL = "http://ntualumniportal.excelindia.com/NTULogin";
+    
+	@BeforeMethod
+    public void beforeMethod(ITestContext ctx) throws InterruptedException {
+		
+		driver = (WebDriver) ctx.getAttribute("driver"); 
+		System.out.println(driver);
+	  }
+	
+  @Test
+  public void f() throws InterruptedException {
+	  
+	  List<WebElement> linksList = clickableLinks();
+	  for (WebElement link : linksList) {
+		  
+		  String href = link.getAttribute("href");
+		  try {
+			  
+			  System.out.println("URL " + href + "returned " + linkStatus(new URL(href)));
+		  }
+		  catch (Exception e) {
+			  System.out.println(e.getMessage());
+		  }
+	  }
+	  
+  }
+  
+  public static List<WebElement> clickableLinks() {
+	  
+	  List<WebElement> linkstoClick = new ArrayList<WebElement>();
+	  List<WebElement> elements = driver.findElements(By.tagName("a"));
+	  elements.add(driver.findElement(By.tagName("img")));     
+       for (WebElement e : elements){
+    	   
+    	   if(e.getAttribute("href")!= null || e.getAttribute("src")!= null) {
+    		   
+    		   linkstoClick.add(e);
+    	   }
+       }
+	 
+	return linkstoClick;
+	
+  }
+  
+  public static String linkStatus(URL url) {
+	  
+	  try {
+		  
+		  HttpURLConnection http = (HttpURLConnection) url.openConnection();
+		  http.connect();
+		  //String responseMessage = http.getResponseMessage();
+		  Integer responseStatus = http.getResponseCode();
+		  http.disconnect();
+		 return responseStatus.toString();
+	  }
+	  
+	  catch (Exception e) { 
+		  return e.getMessage();
+	  }
+	  
+  }
+
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}

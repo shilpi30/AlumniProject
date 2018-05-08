@@ -9,7 +9,7 @@ public class DashboardPage {
 	@FindBy(tagName = "img")
 	WebElement profileImage;
 	
-	@FindBy(xpath = "//a[text()="View all Events"])
+	// @FindBy(xpath = "//a[text()="View all Events"])
 	WebElement viewAllEvents;
 	
 	

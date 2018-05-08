@@ -1,0 +1,46 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+
+public class DashboardLinks {
+ 
+	 static WebDriver driver;
+	@BeforeMethod
+    public void beforeMethod() {
+	  }
+	
+  @Test
+  public void f() {
+	  
+	  
+  }
+  
+  public static List<WebElement> clickableLinks() {
+	  
+	  List<WebElement> linkstoClick = new ArrayList<WebElement>();
+	  List<WebElement> elements = driver.findElements(By.tagName("a"));
+      elements.add(driver.findElement(By.tagName("img")));
+      
+	  
+	  
+	  
+	return linkstoClick;
+	  
+	  
+  }
+  
+
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}

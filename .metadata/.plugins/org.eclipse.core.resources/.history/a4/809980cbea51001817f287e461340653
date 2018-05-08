@@ -1,0 +1,34 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
+import java.util.ArrayList;
+
+import org.testng.annotations.AfterMethod;
+
+public class DashboardLinks {
+ 
+	@BeforeMethod
+    public void beforeMethod() {
+	  }
+	
+  @Test
+  public void f() {
+	  
+	  
+  }
+  
+  public static list<WebElements> clickableLinks () {
+	  
+	  list<WebElements> linkstoClick = new ArrayList<WebElements>();
+	  
+	  
+  }
+  
+
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}

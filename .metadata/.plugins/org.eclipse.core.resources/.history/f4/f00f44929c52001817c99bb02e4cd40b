@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name= "DashboardPage">
+   <test name="LinksCLick">
+     <classes>
+         <class name= "page.classes.DashboardLinks">
+  
+            <methods>
+               <include name = "f"/>
+            </methods>
+         </class>
+        
+         <class name = "page.classes.TestNG">
+         <methods>
+              <include name="clicklinkedin"/>
+          </methods>
+         </class>
+         
+     </classes>
+   </test>
+</suite>

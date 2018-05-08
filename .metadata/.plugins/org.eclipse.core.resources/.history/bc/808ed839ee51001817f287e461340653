@@ -1,0 +1,69 @@
+package page.classes;
+
+import org.testng.annotations.Test;
+
+import org.testng.annotations.BeforeMethod;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+
+import page.classes.TestNG;
+
+public class DashboardLinks {
+ 
+    static WebDriver driver;
+    TestNG testng;
+	@BeforeMethod
+    public void beforeMethod() throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\shilpi.agarwal\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	//	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	//	driver.manage().window().maximize();
+		
+		TestNG testng = new TestNG(driver);
+		
+		 
+	  }
+	
+  @Test
+  public void f() throws InterruptedException {
+	  testng.clickLinkedin(driver);
+	 //  List<WebElement> linksList = clickableLinks();
+	  
+	 
+	  
+	  
+	  
+  }
+  
+  public static List<WebElement> clickableLinks() {
+	  
+	  List<WebElement> linkstoClick = new ArrayList<WebElement>();
+	  List<WebElement> elements = driver.findElements(By.tagName("a"));
+	  elements.addAll(driver.findElement(By.tagName("img")));     
+       for (WebElement e : elements){
+    	   
+    	   if(e.getAttribute("href")!= null) {
+    		   
+    		   linkstoClick.add(e);
+    	   }
+       }
+	 
+	return linkstoClick;
+	
+  }
+  
+
+  @AfterMethod
+  public void afterMethod() {
+  }
+
+}
